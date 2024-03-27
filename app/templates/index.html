@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Wildvine - Give Love for Saving World Animals</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            rel="stylesheet"
+            href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700&family=Oswald:wght@600&display=swap"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+<!--- #HEADER -->
+{% include 'template/header.html' %}
+
+<main>
+    <article>
+        <!--- #HERO -->
+
+        <section class="hero" id="home">
+            <div class="container">
+                <p class="section-subtitle">
+                    <img
+                            src="{{ url_for('static', filename='images/subtitle-img-white.png') }}"
+                            width="32"
+                            height="7"
+                            alt="Wavy line"
+                    />
+
+                    <span>Welcome to Wildvine</span>
+                </p>
+
+                <h2 class="h1 hero-title">
+                    Give Love for Saving <strong>World Animals</strong>
+                </h2>
+
+                <p class="hero-text">
+                    Sit amet consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua suspendisse ultrices
+                    gravida.
+                </p>
+                <a href="#donate" class="navbar-link" data-nav-link>
+                    <button class="btn btn-primary">
+                        <span>Donation</span>
+
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </a>
+            </div>
+        </section>
+
+        <!--- #FEATURES-->
+
+        <section class="section features">
+            <div class="container">
+                <ul class="features-list">
+                    <li class="features-item">
+                        <div class="item-icon">
+                            <ion-icon name="shield-checkmark-outline"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h3 class="h4 item-title">Safe Shelter</h3>
+
+                            <p class="item-text">
+                                Sit amet consecte adiscine eiusm temor ultrices.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="features-item">
+                        <div class="item-icon">
+                            <ion-icon name="water-outline"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h3 class="h4 item-title">Safe Water</h3>
+
+                            <p class="item-text">
+                                Sit amet consecte adiscine eiusm temor ultrices.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="features-item">
+                        <div class="item-icon">
+                            <ion-icon name="leaf-outline"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h3 class="h4 item-title">Ecology Save</h3>
+
+                            <p class="item-text">
+                                Sit amet consecte adiscine eiusm temor ultrices.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="features-item">
+                        <div class="item-icon">
+                            <ion-icon name="snow-outline"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h3 class="h4 item-title">Environment</h3>
+
+                            <p class="item-text">
+                                Sit amet consecte adiscine eiusm temor ultrices.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--- #ABOUT -->
+
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="about-banner">
+                    <h2 class="deco-title">About Us</h2>
+
+                    <img
+                            src="{{ url_for('static', filename='images/deco-img.png') }}"
+                            width="58"
+                            height="261"
+                            alt=""
+                            class="deco-img"
+                    />
+
+                    <div class="banner-row">
+                        <div class="banner-col">
+                            <img
+                                    src="{{ url_for('static', filename='images/about-banner-1.jpg') }}"
+                                    width="315"
+                                    height="380"
+                                    loading="lazy"
+                                    alt="Tiger"
+                                    class="about-img w-100"
+                            />
+
+                            <img
+                                    src="{{ url_for('static', filename='images/about-banner-2.jpg') }}"
+                                    width="386"
+                                    height="250"
+                                    loading="lazy"
+                                    alt="Panda"
+                                    class="about-img about-img-2 w-100"
+                            />
+                        </div>
+
+                        <div class="banner-col">
+                            <img
+                                    src="{{ url_for('static', filename='images/about-banner-3.jpg') }}"
+                                    width="250"
+                                    height="277"
+                                    loading="lazy"
+                                    alt="Elephant"
+                                    class="about-img about-img-3 w-100"
+                            />
+
+                            <img
+                                    src="{{ url_for('static', filename='images/about-banner-4.jpg') }}"
+                                    width="315"
+                                    height="380"
+                                    loading="lazy"
+                                    alt="Deer"
+                                    class="about-img w-100"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <p class="section-subtitle">
+                        <img
+                                src="{{ url_for('static', filename='images/subtitle-img-green.png') }}"
+                                width="32"
+                                height="7"
+                                alt="Wavy line"
+                        />
+
+                        <span>Why Choose Us</span>
+                    </p>
+
+                    <h2 class="h2 section-title">
+                        Rise Your Hand to Save <strong>World Animals Life</strong>
+                    </h2>
+
+                    <ul class="tab-nav">
+                        <li>
+                            <button
+                                    class="tab-btn active"
+                                    onclick="openTab(event, 'tab-content1')"
+                            >
+                                Our Mission
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                    class="tab-btn"
+                                    onclick="openTab(event, 'tab-content2')"
+                            >
+                                Our Vision
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                    class="tab-btn"
+                                    onclick="openTab(event, 'tab-content3')"
+                            >
+                                Next Plan
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div id="tab-content1" class="tab-content">
+                        <p class="section-text">
+                            But I must explain to you how all this mistaken denouncing
+                            pleasure and praising pain was born and I will give you a
+                            complete account of the system expoundmaster
+                        </p>
+
+                        <ul class="tab-list">
+                            <li class="tab-item">
+                                <div class="item-icon">
+                                    <ion-icon name="checkmark-circle"></ion-icon>
+                                </div>
+
+                                <p class="tab-text">Charity For Foods</p>
+                            </li>
+
+                            <li class="tab-item">
+                                <div class="item-icon">
+                                    <ion-icon name="checkmark-circle"></ion-icon>
+                                </div>
+
+                                <p class="tab-text">Charity For Education</p>
+                            </li>
+
+                            <li class="tab-item">
+                                <div class="item-icon">
+                                    <ion-icon name="checkmark-circle"></ion-icon>
+                                </div>
+
+                                <p class="tab-text">Charity For Water</p>
+                            </li>
+
+                            <li class="tab-item">
+                                <div class="item-icon">
+                                    <ion-icon name="checkmark-circle"></ion-icon>
+                                </div>
+
+                                <p class="tab-text">Charity For Medical</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="tab-content2" class="tab-content">
+                        <p class="section-text">
+                            Our vision is to create a world where every individual has
+                            access to essential resources and opportunities, regardless of
+                            their background or circumstances.
+                        </p>
+                        <p class="section-text">
+                            Through sustainable initiatives and community-driven efforts,
+                            we aim to empower individuals and communities to thrive and
+                            reach their full potential.
+                        </p>
+                        <ul class="tab-list">
+                            <li class="tab-item">
+                                <div class="item-icon">
+                                    <ion-icon name="eye"></ion-icon>
+                                </div>
+                                <p class="tab-text">Vision For Equality</p>
+                            </li>
+                            <li class="tab-item">
+                                <div class="item-icon">
+                                    <ion-icon name="globe"></ion-icon>
+                                </div>
+                                <p class="tab-text">Global Impact</p>
+                            </li>
+                            <li class="tab-item">
+                                <div class="item-icon">
+                                    <ion-icon name="people"></ion-icon>
+                                </div>
+                                <p class="tab-text">Empowerment</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="tab-content3" class="tab-content">
+                        <p class="section-text">
+                            Our next plan involves expanding our reach to more communities
+                            in need and implementing innovative solutions to address
+                            pressing challenges.
+                        </p>
+                        <p class="section-text">
+                            By fostering partnerships and leveraging technology, we seek
+                            to maximize our impact and create lasting change.
+                        </p>
+                        <ul class="tab-list">
+                            <li class="tab-item">
+                                <div class="item-icon">
+                                    <ion-icon name="rocket"></ion-icon>
+                                </div>
+                                <p class="tab-text">Expansion</p>
+                            </li>
+                            <li class="tab-item">
+                                <div class="item-icon">
+                                    <ion-icon name="cash"></ion-icon>
+                                </div>
+                                <p class="tab-text">Fundraising</p>
+                            </li>
+                            <li class="tab-item">
+                                <div class="item-icon">
+                                    <ion-icon name="settings"></ion-icon>
+                                </div>
+                                <p class="tab-text">Innovation</p>
+                            </li>
+                            <li class="tab-item">
+                                <div class="item-icon">
+                                    <ion-icon name="people"></ion-icon>
+                                </div>
+                                <p class="tab-text">Community Engagement</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="{{ url_for('index.about') }}">
+                        <button class="btn btn-secondary">
+                            <span>Learn More Us</span>
+
+                            <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        - #CTA
+      -->
+
+        <section class="section cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="h2 section-title">324+ Trusted Global Partners</h2>
+                    <a href="{{ url_for('index.writeus') }}">
+                        <button class="btn btn-outline">
+                            <span>Become a Partner</span>
+                            <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                        </button>
+                    </a>
+                </div>
+                <figure class="cta-banner">
+                    <img src="{{ url_for('static', filename='images/cta-banner.jpg') }}" width="520" height="228"
+                         loading="lazy" alt="Fox" class="img-cover"/>
+                </figure>
+            </div>
+        </section>
+
+
+        <!-- 
+        - #SERVICE
+      -->
+
+        <section
+                class="section service"
+                id="service"
+                style="background-image: url('{{ url_for('static', filename='images/service-map.png') }}')"
+        >
+            <div class="container">
+                <p class="section-subtitle">
+                    <img
+                            src="{{ url_for('static', filename='images/subtitle-img-green.png') }}"
+                            width="32"
+                            height="7"
+                            alt="Wavy line"
+                    />
+
+                    <span>What We Do</span>
+                </p>
+
+                <h2 class="h2 section-title">
+                    We Work Differently to <strong>keep The World Safe</strong>
+                </h2>
+
+                <ul class="service-list">
+                    <li>
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <ion-icon name="leaf-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="h3 card-title">Save Nature</h3>
+
+                            <p class="card-text">
+                                Tempor incididunt ut labores dolore magna suspene
+                            </p>
+
+                            <a href="{{ url_for('index.whatwedo') }}" class="btn-link">
+                                <span>Read More</span>
+
+                                <ion-icon
+                                        name="arrow-forward"
+                                        aria-hidden="true"
+                                ></ion-icon>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <ion-icon name="earth-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="h3 card-title">Save Ecology</h3>
+
+                            <p class="card-text">
+                                Tempor incididunt ut labores dolore magna suspene
+                            </p>
+
+                            <a href="{{ url_for('index.whatwedo') }}" class="btn-link">
+                                <span>Read More</span>
+
+                                <ion-icon
+                                        name="arrow-forward"
+                                        aria-hidden="true"
+                                ></ion-icon>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <ion-icon name="flower-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="h3 card-title">Tree Plantation</h3>
+
+                            <p class="card-text">
+                                Tempor incididunt ut labores dolore magna suspene
+                            </p>
+
+                            <a href="{{ url_for('index.whatwedo') }}" class="btn-link">
+                                <span>Read More</span>
+
+                                <ion-icon
+                                        name="arrow-forward"
+                                        aria-hidden="true"
+                                ></ion-icon>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <ion-icon name="boat-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="h3 card-title">Clear Ocean</h3>
+
+                            <p class="card-text">
+                                Tempor incididunt ut labores dolore magna suspene
+                            </p>
+
+                            <a href="{{ url_for('index.whatwedo') }}" class="btn-link">
+                                <span>Read More</span>
+
+                                <ion-icon
+                                        name="arrow-forward"
+                                        aria-hidden="true"
+                                ></ion-icon>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--- #DONATE -->
+
+        <section class="section donate" id="donate">
+            <div class="container">
+                <ul class="donate-list">
+                    <li>
+                        <div class="donate-card">
+                            <figure class="card-banner">
+                                <img
+                                        src="{{ url_for('static', filename='images/donate-1.jpg') }}"
+                                        width="520"
+                                        height="325"
+                                        loading="lazy"
+                                        alt="Elephant"
+                                        class="img-cover"
+                                />
+                            </figure>
+
+                            <div class="card-content">
+                                <div class="progress-wrapper">
+                                    <p class="progress-text">
+                                        <span>Raised</span>
+
+                                        <data value="256">$256</data>
+                                    </p>
+
+                                    <data class="progress-value" value="83">83%</data>
+                                </div>
+
+                                <div class="progress-box">
+                                    <div class="progress"></div>
+                                </div>
+
+                                <h3 class="h3 card-title">Raise Hand To Save Animals</h3>
+
+                                <div class="card-wrapper">
+                                    <p class="card-wrapper-text">
+                                        <span>Goal</span>
+
+                                        <data class="green" value="34562">$34562</data>
+                                    </p>
+
+                                    <p class="card-wrapper-text">
+                                        <span>Raise</span>
+
+                                        <data class="yellow" value="562">$562</data>
+                                    </p>
+
+                                    <p class="card-wrapper-text">
+                                        <span>To Go</span>
+
+                                        <data class="cyan" value="864">$864</data>
+                                    </p>
+                                </div>
+
+                                <a href="{{ url_for('index.donate') }}">
+                                    <button class="btn btn-secondary">
+                                        <span>Donation</span>
+
+                                        <ion-icon
+                                                name="heart-outline"
+                                                aria-hidden="true"
+                                        ></ion-icon>
+                                    </button
+                                    >
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="donate-card">
+                            <figure class="card-banner">
+                                <img
+                                        src="{{ url_for('static', filename='images/donate-2.jpg') }}"
+                                        width="520"
+                                        height="325"
+                                        loading="lazy"
+                                        alt="Elephant"
+                                        class="img-cover"
+                                />
+                            </figure>
+
+                            <div class="card-content">
+                                <div class="progress-wrapper">
+                                    <p class="progress-text">
+                                        <span>Raised</span>
+
+                                        <data value="256">$256</data>
+                                    </p>
+
+                                    <data class="progress-value" value="83">83%</data>
+                                </div>
+
+                                <div class="progress-box">
+                                    <div class="progress"></div>
+                                </div>
+
+                                <h3 class="h3 card-title">Raise Hand To Save Animals</h3>
+
+                                <div class="card-wrapper">
+                                    <p class="card-wrapper-text">
+                                        <span>Goal</span>
+
+                                        <data class="green" value="34562">$34562</data>
+                                    </p>
+
+                                    <p class="card-wrapper-text">
+                                        <span>Raise</span>
+
+                                        <data class="yellow" value="562">$562</data>
+                                    </p>
+
+                                    <p class="card-wrapper-text">
+                                        <span>To Go</span>
+
+                                        <data class="cyan" value="864">$864</data>
+                                    </p>
+                                </div>
+
+                                <a href="{{ url_for('index.donate') }}">
+                                    <button class="btn btn-secondary">
+                                        <span>Donation</span>
+
+                                        <ion-icon
+                                                name="heart-outline"
+                                                aria-hidden="true"
+                                        ></ion-icon>
+                                    </button
+                                    >
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="donate-card">
+                            <figure class="card-banner">
+                                <img
+                                        src="{{ url_for('static', filename='images/donate-3.jpg') }}"
+                                        width="520"
+                                        height="325"
+                                        loading="lazy"
+                                        alt="Elephant"
+                                        class="img-cover"
+                                />
+                            </figure>
+
+                            <div class="card-content">
+                                <div class="progress-wrapper">
+                                    <p class="progress-text">
+                                        <span>Raised</span>
+
+                                        <data value="256">$256</data>
+                                    </p>
+
+                                    <data class="progress-value" value="83">83%</data>
+                                </div>
+
+                                <div class="progress-box">
+                                    <div class="progress"></div>
+                                </div>
+
+                                <h3 class="h3 card-title">Raise Hand To Save Animals</h3>
+
+                                <div class="card-wrapper">
+                                    <p class="card-wrapper-text">
+                                        <span>Goal</span>
+
+                                        <data class="green" value="34562">$34562</data>
+                                    </p>
+
+                                    <p class="card-wrapper-text">
+                                        <span>Raise</span>
+
+                                        <data class="yellow" value="562">$562</data>
+                                    </p>
+
+                                    <p class="card-wrapper-text">
+                                        <span>To Go</span>
+
+                                        <data class="cyan" value="864">$864</data>
+                                    </p>
+                                </div>
+
+                                <a href="{{ url_for('index.donate') }}">
+                                    <button class="btn btn-secondary">
+                                        <span>Donation</span>
+
+                                        <ion-icon
+                                                name="heart-outline"
+                                                aria-hidden="true"
+                                        ></ion-icon>
+                                    </button
+                                    >
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="donate-card">
+                            <figure class="card-banner">
+                                <img
+                                        src="{{ url_for('static', filename='images/donate-4.jpg') }}"
+                                        width="520"
+                                        height="325"
+                                        loading="lazy"
+                                        alt="Elephant"
+                                        class="img-cover"
+                                />
+                            </figure>
+
+                            <div class="card-content">
+                                <div class="progress-wrapper">
+                                    <p class="progress-text">
+                                        <span>Raised</span>
+
+                                        <data value="256">$256</data>
+                                    </p>
+
+                                    <data class="progress-value" value="83">83%</data>
+                                </div>
+
+                                <div class="progress-box">
+                                    <div class="progress"></div>
+                                </div>
+
+                                <h3 class="h3 card-title">Raise Hand To Save Animals</h3>
+
+                                <div class="card-wrapper">
+                                    <p class="card-wrapper-text">
+                                        <span>Goal</span>
+
+                                        <data class="green" value="34562">$34562</data>
+                                    </p>
+
+                                    <p class="card-wrapper-text">
+                                        <span>Raise</span>
+
+                                        <data class="yellow" value="562">$562</data>
+                                    </p>
+
+                                    <p class="card-wrapper-text">
+                                        <span>To Go</span>
+
+                                        <data class="cyan" value="864">$864</data>
+                                    </p>
+                                </div>
+
+                                <a href="{{ url_for('index.donate') }}">
+                                    <button class="btn btn-secondary">
+                                        <span>Donation</span>
+
+                                        <ion-icon
+                                                name="heart-outline"
+                                                aria-hidden="true"
+                                        ></ion-icon>
+                                    </button
+                                    >
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="{{ url_for('index.donations') }}" class="ld-button">
+                    <button class="btn btn-primary">
+                        <span>Load more</span>
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </a>
+            </div>
+        </section>
+
+        <!--- #TESTIMONIALS -->
+        <section class="testi">
+            {% if random_view %}
+            <div class="testi-content">
+                <p class="section-subtitle">
+                    <img
+                            src="{{ url_for('static', filename='images/subtitle-img-green.png') }}"
+                            width="32"
+                            height="7"
+                            alt="Wavy line"
+                    />
+
+                    <span>{{ random_view.subtitle }}</span>
+                </p>
+
+                <h2 class="h2 section-title">
+                    {{ random_view.title }} <strong>{{ random_view.title }}</strong>
+                </h2>
+
+                <div class="testi-card">
+                    <figure class="card-avatar">
+                        <img
+                                src="{{ url_for('static', filename='images/testi-avatar.png') }}"
+                                width="60"
+                                height="60"
+                                loading="lazy"
+                                alt="David S. Neuman"
+                        />
+                    </figure>
+
+                    <div>
+                        <blockquote class="testi-text">
+                            {{ random_view.text }}
+                        </blockquote>
+
+                        <h3 class="testi-name">{{ random_view.name }}</h3>
+
+                        <p class="testi-title">{{ random_view.lower_title }}</p>
+                    </div>
+                </div>
+                <a href="{{ url_for('index.comments') }}">
+                    <button class="btn btn-primary show-more">
+                        <span>Show more</span>
+
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </a>
+            </div>
+            {% endif %}
+            <figure class="testi-banner">
+                <img
+                        src="{{ url_for('static', filename='images/testi-banner.jpg') }}"
+                        width="960"
+                        height="846"
+                        loading="lazy"
+                        alt="Rhinoceros"
+                        class="img-cover"
+                />
+            </figure>
+        </section>
+
+        <!--- #PARTNER -->
+
+        <section class="section partner">
+            <div class="container">
+                <a
+                        href="https://www.unesco.org/en"
+                        target="_blank"
+                        class="partner-logo"
+                >
+                    <img
+                            src="{{ url_for('static', filename='images/partner-1.png') }}"
+                            width="157"
+                            height="55"
+                            loading="lazy"
+                            alt="Children Fund"
+                            class="gray"
+                    />
+
+                    <img
+                            src="{{ url_for('static', filename='images/partner-1-active.png') }}"
+                            width="157"
+                            height="55"
+                            loading="lazy"
+                            alt="Children Fund"
+                            class="color"
+                    />
+                </a>
+
+                <a
+                        href="https://www.unesco.org/en"
+                        target="_blank"
+                        class="partner-logo"
+                >
+                    <img
+                            src="{{ url_for('static', filename='images/partner-2.png') }}"
+                            width="163"
+                            height="55"
+                            loading="lazy"
+                            alt="Non Profit Agency"
+                            class="gray"
+                    />
+
+                    <img
+                            src="{{ url_for('static', filename='images/partner-2-active.png') }}"
+                            width="163"
+                            height="55"
+                            loading="lazy"
+                            alt="Non Profit Agency"
+                            class="color"
+                    />
+                </a>
+
+                <a
+                        href="https://www.unesco.org/en"
+                        target="_blank"
+                        class="partner-logo"
+                >
+                    <img
+                            src="{{ url_for('static', filename='images/partner-3.png') }}"
+                            width="149"
+                            height="55"
+                            loading="lazy"
+                            alt="Rise Hand Help Us"
+                            class="gray"
+                    />
+
+                    <img
+                            src="{{ url_for('static', filename='images/partner-3-active.png') }}"
+                            width="149"
+                            height="55"
+                            loading="lazy"
+                            alt="Rise Hand Help Us"
+                            class="color"
+                    />
+                </a>
+
+                <a
+                        href="https://www.unesco.org/en"
+                        target="_blank"
+                        class="partner-logo"
+                >
+                    <img
+                            src="{{ url_for('static', filename='images/partner-4.png') }}"
+                            width="169"
+                            height="58"
+                            loading="lazy"
+                            alt="Helping"
+                            class="gray"
+                    />
+
+                    <img
+                            src="{{ url_for('static', filename='images/partner-4-active.png') }}"
+                            width="169"
+                            height="58"
+                            loading="lazy"
+                            alt="Helping"
+                            class="color"
+                    />
+                </a>
+
+                <a
+                        href="https://www.unesco.org/en"
+                        target="_blank"
+                        class="partner-logo"
+                >
+                    <img
+                            src="{{ url_for('static', filename='images/partner-5.png') }}"
+                            width="211"
+                            height="55"
+                            loading="lazy"
+                            alt="Poor Fund Organization"
+                            class="gray"
+                    />
+
+                    <img
+                            src="{{ url_for('static', filename='images/partner-5-active.png') }}"
+                            width="211"
+                            height="55"
+                            loading="lazy"
+                            alt="Poor Fund Organization"
+                            class="color"
+                    />
+                </a>
+            </div>
+        </section>
+
+        <!--- #EVENT -->
+
+        <section class="section event" id="event">
+            <div class="container">
+                <p class="section-subtitle">
+                    <img
+                            src="{{ url_for('static', filename='images/subtitle-img-green.png') }}"
+                            width="32"
+                            height="7"
+                            alt="Wavy line"
+                    />
+
+                    <span>Event & Program</span>
+
+                    <img
+                            src="{{ url_for('static', filename='images/subtitle-img-green.png') }}"
+                            width="32"
+                            height="7"
+                            alt="Wavy line"
+                    />
+                </p>
+
+                <h2 class="h2 section-title">
+                    Our Most Popular Causes For <strong>Building Fund</strong>
+                </h2>
+
+                <ul class="event-list">
+                    {% for event in random_events %}
+                    <li>
+                        <div class="event-card accordion">
+                            <time class="card-time" datetime="01-05">
+                                <span class="month">{{ event.date.strftime('%b') }}</span>
+                                <span class="date">{{ event.date.strftime('%d') }}</span>
+                            </time>
+                            <div class="wrapper">
+                                <div class="card-content">
+                                    <p class="card-subtitle">{{ event.subtitle }}</p>
+                                    <h3 class="card-title">{{ event.title }}</h3>
+                                    <p class="card-text">{{ event.text }}</p>
+                                </div>
+                                <button class="btn btn-white">
+                                    <span>View Event</span>
+                                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <p>
+                                {{ event.description }}
+                            </p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a href="{{ url_for('index.events') }}">
+                    <button class="btn btn-secondary">
+                        <span>Show More</span>
+
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </a>
+            </div>
+        </section>
+
+        <!--- #INSTA POST-->
+
+        <section class="insta-post">
+            <ul class="insta-post-list">
+                <li class="insta-post-item">
+                    <a href="https://www.instagram.com/" target="_blank" class="insta-post-link">
+                        <img
+                                src="{{ url_for('static', filename='images/insta-1.jpg') }}"
+                                width="320"
+                                height="300"
+                                loading="lazy"
+                                alt="Lion"
+                                class="img-cover"
+                        />
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="insta-post-item">
+                    <a
+                            href="https://twitter.com/"
+                            target="_blank"
+                            class="insta-post-link"
+                    >
+                        <img
+                                src="{{ url_for('static', filename='images/insta-2.jpg') }}"
+                                width="320"
+                                height="300"
+                                loading="lazy"
+                                alt="Deer"
+                                class="img-cover"
+                        />
+
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="insta-post-item">
+                    <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            class="insta-post-link"
+                    >
+                        <img
+                                src="{{ url_for('static', filename='images/insta-3.jpg') }}"
+                                width="320"
+                                height="300"
+                                loading="lazy"
+                                alt="Wild Bear"
+                                class="img-cover"
+                        />
+
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="insta-post-item">
+                    <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            class="insta-post-link"
+                    >
+                        <img
+                                src="{{ url_for('static', filename='images/insta-4.jpg') }}"
+                                width="320"
+                                height="300"
+                                loading="lazy"
+                                alt="Deer"
+                                class="img-cover"
+                        />
+
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="insta-post-item">
+                    <a
+                            href="https://www.threads.net/"
+                            target="_blank"
+                            class="insta-post-link"
+                    >
+                        <img
+                                src="{{ url_for('static', filename='images/insta-5.jpg') }}"
+                                width="320"
+                                height="300"
+                                loading="lazy"
+                                alt="Horses"
+                                class="img-cover"
+                        />
+                        <i class="fa-brands fa-threads"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </article>
+</main>
+<!--- #FOOTER-->
+
+{% include 'template/footer.html' %}
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+
+<script src="{{ url_for('static', filename='js/accordion.js') }}"></script>
+</body>
+</html>

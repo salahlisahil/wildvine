@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wildvine - Give Love for Saving World Animals</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/events.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700&family=Oswald:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--- #HEADER -->
+    {% include 'template/header.html' %}
+
+    <main>
+      <article>
+        <section class="section event" id="event">
+          <div class="container">
+            <p class="section-subtitle">
+              <img
+                src="{{ url_for('static', filename='images/subtitle-img-green.png') }}"
+                width="32"
+                height="7"
+                alt="Wavy line"
+              />
+
+              <span>Event & Program</span>
+
+              <img
+                src="{{ url_for('static', filename='images/subtitle-img-green.png') }}"
+                width="32"
+                height="7"
+                alt="Wavy line"
+              />
+            </p>
+
+            <h2 class="h2 section-title">
+              Our Most Popular Causes For <strong>Building Fund</strong>
+            </h2>
+
+            <ul class="event-list">
+              {% for event in all_events %}
+              <li>
+                <div class="event-card accordion">
+                  <time class="card-time" datetime="01-05">
+                    <span class="month">{{ event.date.strftime('%b') }}</span>
+
+                    <span class="date">{{ event.date.strftime('%d') }}</span>
+                  </time>
+
+                  <div class="wrapper">
+                    <div class="card-content">
+                      <p class="card-subtitle">{{ event.subtitle }}</p>
+
+                      <h3 class="card-title">
+                        {{ event.title }}
+                      </h3>
+
+                      <p class="card-text">
+                        {{ event.text }}
+                      </p>
+                    </div>
+
+                    <button class="btn btn-white">
+                      <span>View Event</span>
+
+                      <ion-icon
+                        name="arrow-forward"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </button>
+                  </div>
+                </div>
+                <div class="panel">
+                  <p>
+                    {{ event.description }}
+                  </p>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+
+        <!--- #INSTA POST-->
+      </article>
+    </main>
+
+    <!--- #FOOTER-->
+
+    {% include 'template/footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="{{ url_for('static', filename='js/accordion.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<header class="header" data-header>
+      <div class="container">
+        <h1>
+          <a href="{{ url_for('index.index') }}" class="logo">Wild</a>
+        </h1>
+        <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+        <nav class="navbar" data-navbar>
+          <button
+            class="nav-close-btn"
+            aria-label="Close Menu"
+            data-nav-close-btn
+          >
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <a href="{{ url_for('index.index') }}" class="logo">Wildvine</a>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="{{ url_for('index.index') }}" class="navbar-link" data-nav-link>
+                <span>Home</span>
+
+                <ion-icon
+                  name="chevron-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="{{ url_for('index.about') }}" class="navbar-link" data-nav-link>
+                <span>About</span>
+
+                <ion-icon
+                  name="chevron-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="{{ url_for('index.whatwedo') }}" class="navbar-link" data-nav-link>
+                <span>Service</span>
+
+                <ion-icon
+                  name="chevron-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="{{ url_for('index.donations') }}" class="navbar-link" data-nav-link>
+                <span>Donate</span>
+
+                <ion-icon
+                  name="chevron-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="{{ url_for('index.events') }}" class="navbar-link" data-nav-link>
+                <span>Event</span>
+
+                <ion-icon
+                  name="chevron-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="{{ url_for('index.writeus') }}" class="navbar-link" data-nav-link>
+                <span>Contact</span>
+
+                <ion-icon
+                  name="chevron-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-action">
+          <a href="{{ url_for('index.donations') }}">
+            <button class="btn btn-primary">
+              <span> Donation </span>
+
+              <ion-icon
+                name="heart-outline"
+                aria-hidden="true"
+              ></ion-icon></button
+          ></a>
+        </div>
+      </div>
+    </header>

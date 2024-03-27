@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Wildvine - Give Love for Saving World Animals</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/comments.css') }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700&family=Oswald:wght@600&display=swap"
+            rel="stylesheet"
+    />
+</head>
+
+<body>
+<!--- #HEADER -->
+{% include 'template/header.html' %}
+
+<main>
+    <article>
+        <div class="text-header">
+            <h2 class="h2 section-title">
+                What People Say About <strong>Our Organization</strong>
+            </h2>
+            <p class="section-subtitle">
+                <img
+                        src="{{ url_for('static', filename='images/subtitle-img-green.png') }}"
+                        width="32"
+                        height="7"
+                        alt="Wavy line"
+                />
+
+                <span>Our Testimonials</span>
+            </p>
+        </div>
+        {% for view in all_views %}
+        <section class="testi {% if loop.index % 2 == 0 %}testi-reverse{% endif %}">
+            {% if loop.index % 2 == 0 %}
+            <div class="testi-content">
+                <div class="testi-card">
+                    <figure class="card-avatar">
+                        <img
+                                src="{{ url_for('static', filename='images/testi-avatar.png') }}"
+                                width="60"
+                                height="60"
+                                loading="lazy"
+                                alt="David S. Neuman"
+                        />
+                    </figure>
+                    <div>
+                        <blockquote class="testi-text">
+                            {{ view.text }}
+                        </blockquote>
+                        <h3 class="testi-name">{{ view.name }}</h3>
+                        <p class="testi-title">{{ view.lower_title }}</p>
+                    </div>
+                </div>
+            </div>
+            <figure class="testi-banner" style="display: inline-block;">
+                {% if loop.index % 3 == 1 %}
+                <img
+                        src="{{ url_for('static', filename='images/testi-banner.jpg') }}"
+                        width="480"
+                        height="423"
+                        loading="lazy"
+                        alt="Rhinoceros"
+                        class="img-cover"
+                />
+                {% elif loop.index % 3 == 2 %}
+                <img
+                        src="{{ url_for('static', filename='images/hero.jpg') }}"
+                        width="480"
+                        height="423"
+                        loading="lazy"
+                        alt="Rhinoceros"
+                        class="img-cover"
+                />
+                {% else %}
+                <img
+                        src="{{ url_for('static', filename='images/testi-banner-2.jpg') }}"
+                        width="960"
+                        height="846"
+                        loading="lazy"
+                        alt="Rhinoceros"
+                        class="img-cover"
+                />
+                {% endif %}
+            </figure>
+            {% else %}
+            <figure class="testi-banner" style="display: inline-block;">
+                {% if loop.index % 3 == 1 %}
+                <img
+                        src="{{ url_for('static', filename='images/testi-banner.jpg') }}"
+                        width="480"
+                        height="423"
+                        loading="lazy"
+                        alt="Rhinoceros"
+                        class="img-cover"
+                />
+                {% elif loop.index % 3 == 2 %}
+                <img
+                        src="{{ url_for('static', filename='images/hero.jpg') }}"
+                        width="480"
+                        height="423"
+                        loading="lazy"
+                        alt="Rhinoceros"
+                        class="img-cover"
+                />
+                {% else %}
+                <img
+                        src="{{ url_for('static', filename='images/testi-banner-2.jpg') }}"
+                        width="960"
+                        height="846"
+                        loading="lazy"
+                        alt="Rhinoceros"
+                        class="img-cover"
+                />
+                {% endif %}
+            </figure>
+            <div class="testi-content">
+                <div class="testi-card">
+                    <figure class="card-avatar">
+                        <img
+                                src="{{ url_for('static', filename='images/testi-avatar.png') }}"
+                                width="60"
+                                height="60"
+                                loading="lazy"
+                                alt="David S. Neuman"
+                        />
+                    </figure>
+                    <div>
+                        <blockquote class="testi-text">
+                            {{ view.text }}
+                        </blockquote>
+                        <h3 class="testi-name">{{ view.name }}</h3>
+                        <p class="testi-title">{{ view.lower_title }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </section>
+        {% endfor %}
+
+
+        <!--- #INSTA POST-->
+    </article>
+</main>
+
+<!--- #FOOTER-->
+
+{% include 'template/footer.html' %}
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+
+<script src="{{ url_for('static', filename='js/accordion.js') }}"></script>
+</body>
+</html>

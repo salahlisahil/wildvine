@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wildvine - Give Love for Saving World Animals</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/whatwedo.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700&family=Oswald:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- 
+    - #HEADER
+  -->
+    <video
+      id="background-video"
+      autoplay
+      loop
+      muted
+      poster="{{ url_for('static', filename='images/video1.mp4') }}"
+    >
+      <source src="{{ url_for('static', filename='images/video1.mp4') }}" type="video/mp4" />
+    </video>
+
+    {% include 'template/header.html' %}
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <section class="hero" id="home">
+          <div class="container">
+            <h2 class="h1 hero-title">
+              All we want to help nature <strong>With Your Donations</strong>
+            </h2>
+          </div>
+        </section>
+
+        <section class="wwd">
+          <div class="container">
+            <div>
+              <img src="{{ url_for('static', filename='images/help-1.jpg') }}" alt="" />
+              <p>We save nature <ion-icon name="heart-outline"></ion-icon></p>
+            </div>
+            <div>
+              <p>We heal <ion-icon name="medkit-outline"></ion-icon></p>
+              <img src="{{ url_for('static', filename='images/help-3.jpg') }}" alt="" />
+            </div>
+            <div>
+              <img src="{{ url_for('static', filename='images/help-2.jpg') }}" alt="" />
+              <p>We save Ecology<ion-icon name="flower-outline"></ion-icon></p>
+            </div>
+            <div>
+              <p>We donate <ion-icon name="bandage-outline"></ion-icon></p>
+              <img src="{{ url_for('static', filename='images/help-4.jpg') }}" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="story">
+          <div class="container">
+            <h1>Save Nature</h1>
+            <div>
+              <p>
+                The European languages are members of the same family. Their
+                separate existence is a myth. For science, music, sport, etc,
+                Europe uses the same vocabulary. The languages only differ in
+                their grammar, their pronunciation and their most common words.
+                Everyone realizes why a new common language would be desirable:
+                one could refuse to pay expensive translators. To achieve this,
+                it would be necessary to have uniform grammar, pronunciation and
+                more common words. If several languages coalesce, the grammar of
+                the resulting language is more simple and regular than that of
+                the individual languages.
+              </p>
+              <img src="{{ url_for('static', filename='images/about-6.jpg') }}" alt="" />
+            </div>
+            <div>
+              <h1>Save Oceans</h1>
+              <p>
+                The new common language will be more simple and regular than the
+                existing European languages. It will be as simple as Occidental;
+                in fact, it will be Occidental. To an English person, it will
+                seem like simplified English, as a skeptical Cambridge friend of
+                mine told me what Occidental is. The European languages are
+                members of the same family. Their separate existence is a myth.
+                For science, music, sport, etc, Europe uses the same vocabulary.
+                The languages only differ in their grammar, their pronunciation
+                and their most common words.
+              </p>
+              <img src="{{ url_for('static', filename='images/about-7.jpg') }}" alt="" />
+
+              <h1>Save Ecology</h1>
+              <p>
+                Everyone realizes why a new common language would be desirable:
+                one could refuse to pay expensive translators. To achieve this,
+                it would be necessary to have uniform grammar, pronunciation and
+                more common words. If several languages coalesce, the grammar of
+                the resulting language is more simple and regular than that of
+                the individual languages. The new common language will be more
+                simple and regular than the existing European languages. It will
+                be as simple as Occidental; in fact, it will be Occidental. To
+                an English person, it will seem like simplified English, as a
+                skeptical Cambridge friend of mine told me what Occidental is.
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <!-- 
+    - #FOOTER
+  -->
+
+    {% include 'template/footer.html' %}
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="{{ url_for('static', filename='js/accordion.js') }}"></script>
+  </body>
+</html>

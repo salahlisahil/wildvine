@@ -1,0 +1,8 @@
+flask
+Flask-SQLAlchemy
+Flask-Session
+Flask-Mail
+cachelib
+Flask-Admin
+gunicorn
+redis
